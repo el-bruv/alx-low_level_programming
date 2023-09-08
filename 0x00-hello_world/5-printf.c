@@ -1,7 +1,11 @@
 #include <stdio.h>
 
 /**
- * main_void: print simple string using built-in printf
+ * main - print simple string using built-in printf
+ *
+ * Description: prints a simple string, followed by a new line
+ *
+ * Return: returns zero to signal successful run of program
  */
 int main(void)
 {

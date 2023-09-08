@@ -1,7 +1,11 @@
 #include <stdio.h>
 
 /**
- * main_void: print simple string using built-in 'puts' function
+ * main - print simple string
+ *
+ * Description: print string using built-in function 'puts'
+ *
+ * Return: returns zero to signal success with the run
  */
 int main(void)
 {

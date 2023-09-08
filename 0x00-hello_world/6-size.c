@@ -1,7 +1,11 @@
 #include <stdio.h>
 
 /**
- * main_void : prints sizes of various data types
+ * main - prints size of data type
+ *
+ * Description: prints out on a new line sizes of various data types
+ *
+ * Return: it returns a zero, to signal success of operation
  */
 int main(void)
 {
