@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/**
+ * main - print character by character
+ *
+ * Description: print alphabet in lowercase then uppercase
+ *
+ * Return: zero for successful run
+ */
+
 int main(void)
 {
 	char a;
