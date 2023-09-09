@@ -20,7 +20,7 @@ int main(void)
 	}
 	while (n <= 16)
 	{
-		putchar(55 + n);
+		putchar(87 + n);
 		n++;
 	}
 	putchar('\n');
