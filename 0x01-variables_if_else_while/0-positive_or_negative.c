@@ -13,7 +13,9 @@ if (n > 0)
 else if (n < 0)
 {
 	printf("%i is negative\n", n);
-} else {
+}
+else
+{
 	printf("%i is zero\n", n);
 }
 
