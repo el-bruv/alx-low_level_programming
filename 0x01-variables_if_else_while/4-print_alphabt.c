@@ -17,13 +17,13 @@ int main(void)
 	{
 		if (a == 'q' || a == 'e')
 		{
-			continue;
+			a++;
 		}
 		else
 		{
 			putchar(a);
+			a++;
 		}
-		a++;
 	}
 	putchar('\n');
 	return (0);
