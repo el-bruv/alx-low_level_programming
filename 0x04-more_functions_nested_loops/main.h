@@ -4,6 +4,6 @@
  * main.h - header file containing prototypes
  *
  */
-int _issupper(int c);
+int _isupper(int c);
 
 #endif 
