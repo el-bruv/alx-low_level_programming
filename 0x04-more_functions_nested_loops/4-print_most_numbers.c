@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_numbers - print out decimal digits
+ * print_most_numbers - print out decimal digits except specified
  *
  * Return: void, so nothing
  */
