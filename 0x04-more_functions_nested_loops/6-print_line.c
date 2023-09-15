@@ -2,6 +2,7 @@
 
 /**
  * print_line - function to print a line of underscores
+ * @n: parameter to define length of line
  *
  * Return: void, so no value except to print line
  */
