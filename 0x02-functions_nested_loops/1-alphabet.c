@@ -1,5 +1,3 @@
-#include "main.h"
-
 /**
  * print_alphabet - to display lowercase alphabet
  *
