@@ -11,12 +11,13 @@ int print_last_digit(int k)
 {
 	int x;
 
+	x = 0;
 	if (k == INT_MIN)
-		x = (x % 10) * -1;
-	else if (x < 0)
-		x = _abs(x) % 10;
+		x = (k % 10) * -1;
+	else if (k < 0)
+		x = _abs(k) % 10;
 	else
-		x = x % 10;
+		x = k % 10;
 	_putchar(48 + x);
 	return (x);
 }
