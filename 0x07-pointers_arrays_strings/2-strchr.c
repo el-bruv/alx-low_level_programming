@@ -10,13 +10,11 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	int k;
-
-	k = 0;
-	while (s[k])
-		k++;
+	
+	if (!s)
+		return (0);
 	i = 0;
-	while (i < k)
+	while (s[i])
 	{
 		if (s[i] == c)
 			return (&s[i]);
