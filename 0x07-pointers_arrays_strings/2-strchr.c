@@ -10,9 +10,7 @@
 char *_strchr(char *s, char c)
 {
 	int i;
-	
-	if (!s)
-		return (0);
+
 	i = 0;
 	while (s[i])
 	{
