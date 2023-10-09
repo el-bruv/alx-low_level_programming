@@ -51,5 +51,5 @@ int main(int argc, char **argv)
 	j = _atoi(argv[2]);
 	m = u * j;
 	printf("%d\n", m);
-	return (m);
+	return (0);
 }
