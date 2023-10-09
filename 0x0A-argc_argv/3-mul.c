@@ -7,19 +7,24 @@
  *
  * Return: integer value of string
  */
-long int _atoi(char *s)
+int _atoi(char *s)
 {
-	long int i;
-	long int k;
+	int i;
+	int k;
 
 	i = 0;
+	if (s[0] == '-')
+		i++;
 	k = 0;
 	while (s[i])
 	{
 		k += (s[i] - 48);
-		k *= 10;
+		if (s[i + 1] != '\0')
+			k *= 10;
 		i++;
 	}
+	if (s[0] == '-')
+		k *= -1;
 	return (k);
 }
 
@@ -33,9 +38,9 @@ long int _atoi(char *s)
  */
 int main(int argc, char **argv)
 {
-	long int u;
-	long int j;
-	long int m;
+	int u;
+	int j;
+	int m;
 
 	if (argc != 3)
 	{
@@ -45,6 +50,6 @@ int main(int argc, char **argv)
 	u = _atoi(argv[1]);
 	j = _atoi(argv[2]);
 	m = u * j;
-	printf("%ld\n", m);
+	printf("%d\n", m);
 	return (m);
 }
