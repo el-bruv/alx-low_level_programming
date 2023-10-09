@@ -2,8 +2,10 @@
 #include "main.h"
 
 /**
- * whatsmyname - program to print out program name
- * 
+ * main - program to print out program/executable name
+ * @argc: counter parameter for arguments given in
+ * @argv: array of arguments passed in
+ *
  * Return: 0 for success
  */
 int main(int argc, char **argv)
