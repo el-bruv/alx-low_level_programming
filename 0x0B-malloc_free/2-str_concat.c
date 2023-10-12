@@ -14,8 +14,12 @@ char *str_concat(char *s1, char *s2)
 	int k;
 	char *s;
 
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (0);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	i1 = 0;
 	while (s1[i1] != '\0')
 		i1++;
