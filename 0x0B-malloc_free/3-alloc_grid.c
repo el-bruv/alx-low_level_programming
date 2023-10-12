@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * alloc_grid - declare and initialize a 2d array to 0's
@@ -15,7 +16,7 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (0);
-	garray = (int **)malloc(sizeof(int) * (width + 1));
+	garray = (int **)malloc(sizeof(int *) * (width + 1));
 	if (!garray)
 		return (0);
 	k = 0;
