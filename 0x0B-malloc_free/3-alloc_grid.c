@@ -19,21 +19,17 @@ int **alloc_grid(int width, int height)
 	garray = (int **)malloc(sizeof(int *) * (width));
 	if (garray == 0 || sizeof(garray) != sizeof(int **))
 		return (0);
-	i = 0;
-	while (i < width)
+	for (i = 0; i < width; i++)
 	{
 		garray[i] = (int *)malloc(sizeof(int) * (height));
 		if (garray[i] == 0 || sizeof(garray[i]) != sizeof(int *))
 			return (0);
-		k = 0;
-		while (k < height)
+		for (k = 0; k < height; k++)
 		{
 			garray[i][k] = 0;
 			if (garray[i][k] != 0 || sizeof(garray[i][k]) != sizeof(int))
 				return (0);
-			k++;
 		}
-		i++;
 	}
 	return (garray);
 }
