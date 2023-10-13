@@ -6,7 +6,7 @@
  * @width: width of array parameter
  * @height: height of array parameter
  *
- * Return: initialized array, 0 on failure/parameter being 0/param < 0;
+ * Return: initialized array, 0 on failure/parameter <= 0;
  */
 int **alloc_grid(int width, int height)
 {
@@ -16,29 +16,24 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (0);
-	garray = (int **)malloc(sizeof(int *) * (width + 1));
-	if (!garray)
+	garray = (int **)malloc(sizeof(int *) * (width));
+	if (garray == 0 || sizeof(garray) != sizeof(int **))
 		return (0);
-	k = 0;
-	while (k < width)
-	{
-		garray[k] = (int *)malloc(sizeof(int) * (height + 1));
-		if (!garray[k])
-			return (0);
-		k++;
-	}
 	i = 0;
 	while (i < width)
 	{
+		garray[i] = (int *)malloc(sizeof(int) * (height));
+		if (garray[i] == 0 || sizeof(garray[i]) != sizeof(int *))
+			return (0);
 		k = 0;
 		while (k < height)
 		{
 			garray[i][k] = 0;
+			if (garray[i][k] != 0 || sizeof(garray[i][k]) != sizeof(int))
+				return (0);
 			k++;
 		}
-		garray[i][k] = '\0';
 		i++;
 	}
-	garray[i] = '\0';
 	return (garray);
 }
