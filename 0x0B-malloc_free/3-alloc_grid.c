@@ -15,15 +15,15 @@ int **alloc_grid(int width, int height)
 
 	if (width <= 0 || height <= 0)
 		return (0);
-	garray = (int **)malloc(sizeof(*garray) * width);
+	garray = malloc(sizeof(int *) * height);
 	if (garray == NULL)
 		return (0);
-	for (i = 0; i < width; i++)
+	for (i = 0; i < height; i++)
 	{
-		garray[i] = (int *)malloc(sizeof(garray) * height);
+		garray[i] = malloc(sizeof(int **) * width);
 		if (garray[i] == NULL)
 			return (0);
-		for (k = 0; k < height; k++)
+		for (k = 0; k < width; k++)
 		{
 			garray[i][k] = 0;
 			if (garray[i][k] != 0)
