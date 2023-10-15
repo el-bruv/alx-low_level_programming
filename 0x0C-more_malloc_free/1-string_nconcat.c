@@ -32,7 +32,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i = i;
 	else
 	{
-		while (s1[i] != '\0' && i < k)
+		while ((s1[i] != '\0') && (i < k))
 		{
 			s[i] = s1[i];
 			i++;
@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		i = i;
 	else
 	{
-		while (s2[i - s1l] != '\0' && (i - s1l) < n && i < k)
+		while ((s2[i - s1l] != '\0') && ((i - s1l) < n) && (i < k))
 		{
 			s[i] = s2[i - s1l];
 			i++;
