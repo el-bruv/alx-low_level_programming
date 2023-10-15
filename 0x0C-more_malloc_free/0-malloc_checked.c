@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * malloc_checked - allocate memory
  * @b: size parameter
@@ -10,10 +10,6 @@ void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
-	if (b <= 0)
-		exit(98);
-	if (b % 2 != 0)
-		exit(98);
 	ptr = malloc(b);
 	if (ptr == NULL || ptr == 0)
 		exit(98);
