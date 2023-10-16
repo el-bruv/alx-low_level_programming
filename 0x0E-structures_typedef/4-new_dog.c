@@ -1,4 +1,34 @@
 #include "dog.h"
+#include <stdio.h>
+
+/**
+ * _strcpy - copy a string from source to destination
+ * @src: source string parameter
+ * @dest: destination parameter
+ *
+ * Return: pointer to destination string, NULL for otherwise
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	if (src == NULL)
+		return (NULL);
+	i = 0;
+	while (src[i] != '\0')
+		i++;
+	dest = malloc(sizeof(char) * (i + 1));
+	if (dest == NULL)
+		return (NULL);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}
 
 /**
  * new_dog - create a new struct entry
@@ -16,15 +46,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggo = malloc(sizeof(dog_t));
 	if (doggo == NULL)
 		return (NULL);
-	doggo->name = name;
-	if (doggo->name != name)
-		return (NULL);
+	doggo->name = _strcpy(doggo->name, name);
 	doggo->age = age;
-	if (doggo->age != age)
-		return (NULL);
-	doggo->owner = owner;
-	if (doggo->owner != owner)
-		return (NULL);
+	doggo->owner = _strcpy(doggo->owner, owner);
 	if (doggo == NULL)
 		return (NULL);
 	return (doggo);
