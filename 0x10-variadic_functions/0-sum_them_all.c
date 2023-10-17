@@ -14,7 +14,7 @@ int sum_them_all(const unsigned int n, ...)
 
 	if (n == 0)
 		return (0);
-	va_start (pl, n);
+	va_start(pl, n);
 	tally = 0;
 	i = 0;
 	while (i < n)
@@ -22,6 +22,6 @@ int sum_them_all(const unsigned int n, ...)
 		tally = tally + va_arg(pl, int);
 		i++;
 	}
-	va_end (pl);
+	va_end(pl);
 	return (tally);
 }
